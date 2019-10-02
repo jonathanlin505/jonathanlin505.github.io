@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jonathan Lin | Portfolio</title>
+
+<style>
+
+	body {
+		background-color:#FAFAFA;
+		margin:0;
+		font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	}
+
+	#wrapper {
+		width:1000px;
+		margin:0 auto;
+		background-color:#333;
+	}
+
+	#profile {
+		width:200px;
+		padding:50px;
+		float:left;
+		background-color:#333;
+		color:#FAFAFA;
+	}
+
+	#profile p {
+		font-weight:300;
+	}
+
+	#myimage {
+		width:200px;
+		border-radius:50%;
+		overflow:hidden;
+		height:200px;
+		margin:40px auto;
+	}
+
+	#myimage img {
+		width:200px;
+		height:auto;
+	}
+
+	#content {
+		width:600px;
+		padding:50px;
+		float:left;
+		background-color:#FAFAFA;
+	}
+
+	.buttonsleft {
+		width:285px;
+		height:200px;
+		background-color:green;
+		float:left;
+		margin-right:30px;
+	}
+
+	#content a {
+		display:block;
+		height:200px;
+		width:285px;
+		text-align:center;
+		line-height:200px;
+		position:relative;
+	}
+
+	.buttonsright {
+		width:285px;
+		height:200px;
+		background-color:green;
+		float:left;
+		position:relative;
+	}
+
+	.clearfloat {
+		clear:both;
+	}
+
+	.divider {
+		width:600px;
+		height:30px;
+		float:left;
+	}
+
+	.overlay {
+		position:relative;
+		height:200px;
+		width:285px;
+		background-color:rgba(0,0,0,0.5);
+	}
+
+	.overlay:hover {
+		background-color:rgba(0,0,0,0);
+		transition:1s ease all;
+	}
+
+	a {
+		color:#fff;
+		text-decoration:none;
+	}
+
+	span {
+		font-weight:900;
+	}
+</style>
+</head>
+<body>
+	<div id=wrapper>
+		<div id=profile>
+			<h1>Jonathan Lin</h1>
+				<div id=myimage>
+					<img src="img/me.jpg"></img>
+				</div>
+			<p><span style="color:#666">Student at the</span> University of Southern California</p>
+			<p>B.S. in Chemical Engineering</p>
+		</div>
+
+		<div id="content">
+			<h1>Portfolio</h1>
+			<p>desc</p>
+			<div class="buttonsleft">
+				<div class="overlay">
+					<a href="http://www.google.com" target="_blank"><span>Python:</span> Baseball Analysis</a>
+				</div>
+			</div>
+
+			<div class="buttonsright">
+				<div class="overlay">
+					<a href="http://www.google.com" target="_blank"><span>Python:</span> Cryptocurrencies</a>
+				</div>
+			</div>
+
+			<div class="divider"></div>
+
+			<div class="buttonsleft">
+				<div class="overlay">
+					<a href="http://www.google.com" target="_blank"><span>MATLAB:</span> ChE Lab</a>
+				</div>
+			</div>
+
+			<div class="buttonsright">
+				<div class="overlay">
+					<a href="http://www.google.com" target="_blank"><span>HTML/CSS/JS</span></a>
+				</div>
+			</div>
+		</div>
+		<div class="clearfloat"></div>
+	</div>
+</body>
+</html>
