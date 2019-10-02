@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="This page is all about Japanese food, which is divided into two big categories, washoku and yoshoku. I hope Emmanuel and his family tries them all even though his mom is a picky eater.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Lin | Final Project TASTE</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+  <style>
+
+  	#top {
+  		background-image:url(img/Cuisine.jpg);
+  		background-size:100% auto;
+   	}
+
+   	.sectiontext h1 {
+		letter-spacing:0.14em;
+	}
+
+   	.sectionimage img {
+		width:auto;
+		height:100%;
+		position:relative;
+		float:right;
+	}
+
+	.box2 img {
+		height:auto;
+		width:800px;
+		position:relative;
+		bottom:290px;
+	}
+
+	.box3 img {
+		height:auto;
+		width:830px;
+		position:relative;
+		float:right;
+		bottom:180px;
+	}
+
+	.box5 img {
+		height:auto;
+		width:700px;
+		position:relative;
+		bottom:230px;
+		float:right;
+	}
+
+	.box6 img {
+		width:1100px;
+		height:auto;
+		float:left;
+		right:200px;
+		position:relative;
+		bottom:500px;
+	}
+
+	.box7 img {
+		height:auto;
+		width:900px;
+		float:right;
+		left:50px;
+		position:relative;
+		bottom:400px;
+	}
+
+	.box8 img {
+		height:500px;
+		width:auto;
+		position:relative;
+		float:left;
+		bottom:480px;
+	}
+
+	.box9 img {
+		height:600px;
+		width:auto;
+		float:right;
+		position:relative;
+		right:-80px;
+		bottom:750px;
+	}
+
+	.box10 img {
+		width:auto;
+		height:700px;
+		float:right;
+		position:relative;
+		bottom:910px;
+	}
+
+	.f1 {
+		width:100px;
+		right:430px;
+		top:8800px;
+		transform:rotate(45deg);
+	}
+
+	.f2 {
+		width:100px;
+		right:250px;
+		top:2500px;
+		transform:rotate(45deg);
+	}
+
+	.f3 {
+		width:50px;
+		right:200px;
+		top:1300px;
+		transform:rotate(30deg);
+	}
+
+	.f4 {
+		width:30px;
+		right:430px;
+		top:1500px;
+		transform:rotate(10deg);
+	}
+
+	.f5 {
+		width:50px;
+		right:200px;
+		top:6000px;
+		transform:rotate(30deg);
+	}
+
+	.f6 {
+		width:30px;
+		right:280px;
+		top:5400px;
+		transform:rotate(10deg);
+	}
+
+	.mentions a {
+		text-decoration:none;
+		display:inline-block;
+		color:#ccc;
+		font-family:Lato, sans-serif;
+		font-weight:300;
+		transition:all 1s ease;
+	}
+
+	.mentions a:hover {
+		color:#963636;
+	}
+
+  </style>
+</head>
+
+<body>
+
+<div class="flower">
+	<div class="rellax" data-rellax-speed="10">
+		<img class="f f1" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+	<div class="rellax" data-rellax-speed="10">
+		<img class="f f2" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+	<div class="rellax" data-rellax-speed="5">
+		<img class="f f3" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+	<div class="rellax" data-rellax-speed="3">
+		<img class="f f4" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+	<div class="rellax" data-rellax-speed="5">
+		<img class="f f5" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+	<div class="rellax" data-rellax-speed="3">
+		<img class="f f6" src="img/Cherry.png" alt="Cherry Blossom">
+	</div>
+</div>
+
+<div id="top">
+
+	<div id="circle"></div>
+
+	<div id="navbar">
+		<div id="nav">
+			<ul>
+				<li><a class="underline" href="index.html">HOME</a></li>
+				<li><a class="underline" href="visit.html">VISIT</a></li>
+				<li><a id="currentpage" href="taste.html">TASTE</a></li>
+				<li><a class="underline" href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="title" data-scroll>
+		<div class="sectionimage">
+			<img src="img/dining.jpg" alt="Cuisine">
+		</div>
+		<div class="sectiontext">
+			<div>
+				<h1>CUISINE<br><span>料理</span></h1>
+				<div id="titleline"></div>
+				<p>Washoku is the traditional cuisine of Japan, which emphasizes on seasonal ingredients.<br>Yoshoku draws influences from Western cooking following the Meiji Restoration.<br>Try them out!</p>
+				<div class="button" onclick="location.href='#tokyo';">
+					WASHOKU
+				</div>
+				<div class="button" onclick="location.href='#kyoto';">
+					YOSHOKU
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="section" id="tokyo">
+	<div data-scroll>
+		<h1>WASHOKU</h1>
+		<p>和食</p>
+	</div>
+</div>
+
+<div class="collage">
+
+	<div class="box1">
+		<div data-scroll>
+			<h2>NIGIRI<br><span>握り寿司</span></h2>
+			<div class="line"></div>
+			<p>My favorite Japanese food, nigiri, is a type of sushi typically made of raw fish over rice. A good place to try nigiri and other Japanese seafood is <a href="https://www.japan-guide.com/e/e3021.html" target="_blank">Tsukiji Fish Market</a> in Tokyo.</p>
+		</div>
+	</div>
+
+	<div class="box2">
+		<img class="rellax" data-rellax-speed="-2" src="img/Nigiri.jpg" alt="Nigiri">
+		<div class="shadowtop"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box3">
+		<img class="rellax" data-rellax-speed="-1" src="img/Sukiyaki.jpg" alt="Sukiyaki">
+		<div class="shadowleft"></div>
+	</div>
+
+	<div class="box4">
+		<div data-scroll>
+			<h2>SUKIYAKI<br><span>すき焼き</span></h2>
+			<div class="line"></div>
+			<p>A type of Japanese hot pot, sukiyaki is made up of a base of soy sauce, sugar, and mirin. Simply cook meat, vegetables, and or noodles inside and enjoy.</p>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box1">
+		<div data-scroll>
+			<h2>UNADON<br><span>鰻丼</span></h2>
+			<div class="line"></div>
+			<p>Unadon is simply unagi (grilled eel), served over rice. Many restaurants in Japan specialize in unadon. I strongly recommend <a href="https://savorjapan.com/0006076978/" target="_blank">Unagi Komagata Maekawa</a> in Tokyo.</p>
+		</div>
+	</div>
+
+	<div class="box5">
+		<img class="rellax" data-rellax-speed="-1" src="img/Unadon.jpg" alt="Unadon">
+		<div class="shadowright"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box6">
+		<img class="rellax" data-rellax-speed="-2" src="img/Chado.jpg" alt="Chado">
+		<div class="shadowbottom"></div>
+	</div>
+
+	<div class="box4">
+		<div data-scroll>
+			<h2>MATCHA<br><span>抹茶</span></h2>
+			<div class="line"></div>
+			<p>Despite its Chinese roots, matcha is almost idiosyncratic to Japan because of the deep-rooted tradition of <a href="https://www.japan-experience.com/to-know/understanding-japan/chanoyu-the-japanese-tea-ceremony" target="_blank">chanoyu</a>, the Japanese tea ceremony. If you're tired of shopping, visit a local teahouse for a nice cup of matcha or afternoon tea.</p>
+		</div>
+	</div>
+
+</div>
+
+<div class="section" id="kyoto">
+	<div data-scroll>
+		<h1>YOSHOKU</h1>
+		<p>洋食</p>
+	</div>
+</div>
+
+<div class="collage">
+
+	<div class="box1">
+		<div data-scroll>
+			<h2>TONKATSU<br><span>豚カツ</span></h2>
+			<div class="line"></div>
+			<p>Tonkatsu is a very popular Japanese dish. It is basically deep-fried, breaded pork cutlet. I highly recommend the Michelin-approved <a href="https://jw-webmagazine.com/akihabara-restaurant-guide-vol-3-tonkatsu-marugo-dc3b0fe009c" target="_blank">Tonkatsu Marugo</a> in Akihabara.</p>
+		</div>
+	</div>
+
+	<div class="box9">
+		<img class="rellax" data-rellax-speed="-2" src="img/Tonkatsu.jpg" alt="Tonkatsu">
+		<div class="shadowtop"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box7">
+		<img class="rellax" data-rellax-speed="-1" src="img/Yakiniku.jpg" alt="Yakiniku">
+		<div class="shadowleft"></div>
+	</div>
+
+	<div class="box4">
+		<div data-scroll>
+			<h2>YAKINIKU<br><span>焼き肉</span></h2>
+			<div class="line"></div>
+			<p>If you enjoy Korean barbecue, you will definitely enjoy yakiniku, which basically translates to "grilled meat". If budget allows, you should try wagyu beef.</p>
+		</div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box1">
+		<div data-scroll>
+			<h2>SOUFFL&Eacute; PANCAKE<br><span>スフレパンケーキ</span></h2>
+			<div class="line"></div>
+			<p>Japanese people are no strangers to desserts. Souffl&eacute; pancakes are very popular among the younger generations. If you have the chance, try this dish at <a href="https://billsjapan.com/en/location/tokyo" target="_blank">Bills</a> in Tokyo.</p>
+		</div>
+	</div>
+
+	<div class="box8">
+		<img class="rellax" data-rellax-speed="-1" src="img/Bills.jpg" alt="Souffle Pancake">
+		<div class="shadowright"></div>
+	</div>
+
+	<div class="divider"></div>
+
+	<div class="box10">
+		<img class="rellax" data-rellax-speed="-2" src="img/Baum.jpg" alt="Baumkuchen">
+		<div class="shadowbottom"></div>
+	</div>
+
+	<div class="box4">
+		<div data-scroll>
+			<h2>BAUMKUCHEN<br><span>バームクーヘン</span></h2>
+			<div class="line"></div>
+			<p>You can't leave Japan without gifts for family and friends. A good gift is the baumkuchen, one of the most popular pastries in Japan. <a href="https://www.nenrinya.jp/" target="_blank">Nenrinya</a> sells the best ones in my opinion. If you do go there, get the ones with the rough edges like the ones in the picture.</p>
+		</div>
+	</div>
+
+</div>
+
+<div class="section">
+	<div data-scroll>
+		<h1>honorable mentions:</h1>
+		<p class="mentions"><a href="https://www.forbes.com/sites/geoffreymorrison/2016/05/30/the-best-ramen-in-the-world-japans-ichiran-ramen/#3e61971328cd" target="_blank">Ichiran Ramen</a> | <a href="https://favy-jp.com/topics/410" target="_blank">MOS Burger</a> | <a href="https://jw-webmagazine.com/5-best-izakaya-alleys-in-tokyo-2f0720eb6454" target="_blank">Izakaya Alleys</a></p>
+		<p class="back">back to <a href="#top">top</a></p>
+	</div>
+</div>
+
+<div id="footer">
+	<div id="author">
+		<img src="img/Cherry.png" alt="Cherry Blossom">
+		<p>thank you mom and dad<br>this was made possible with Google<br>and time</p>
+		<p><span id="copyright">&copy; Copyright 2019 | No animals were harmed | Peace</span></p>
+	</div>
+
+	<div id="links">
+		<div>
+			<h3>OTHER RESOURCES</h3>
+			<p><a href="https://ninjawifi.com/" target="_blank">Ninja Wi-Fi</a></p>
+			<p><a href="https://www.japanvisitor.com/japan-travel/japan-transport/japan-subway" target="_blank">Japan Metro Guide</a></p>
+			<p><a href="https://www.japan-guide.com/e/e2164.html" target="_blank">Tokyo Travel Guide</a></p>
+			<p><a href="https://www.japan-guide.com/e/e2158.html" target="_blank">Kyoto Travel Guide</a></p>
+		</div>
+		<div>
+			<h3>NAVIGATE</h3>
+			<p><a href="index.html">Home</a></p>
+			<p><a href="visit.html">Visit</a></p>
+			<p><a href="#top">Taste</a></p>
+			<p><a href="contact.html">Contact</a></p>
+		</div>
+	</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script src="rellax/rellax.min.js"></script>
+<script>window.onload = function(){
+    		var rellax = new Rellax('.rellax');
+		}
+</script>
+
+<script>
+	ScrollOut();
+</script>
+
+</body>
+</html>

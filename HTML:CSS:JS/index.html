@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+  <meta name="description" content="This website is made for a friend, Emmanuel (also in ITP104), who is traveling to Japan this summer. The website serves as a guide that recommends Emmanuel places to go and food to eat (the two things I care about when traveling). This website is specifically designed for viewport sizes of 13 in. to 15 in. laptops.">
+
+  <title>Jonathan Lin | Final Project HOMEPAGE</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300" rel="stylesheet">
+
+  <style>
+    
+  	body {
+  		margin:0;
+  		font-family:Karla,sans-serif;
+  		background-color:#333;
+  	}
+
+  	@keyframes show {
+		0% {opacity:0;}
+		100% {opacity:1;}
+	}
+
+  	#topwrapper {
+  		opacity:0;
+  		width:100%;
+  		height:100vh;
+  		animation:show 2s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+		animation-delay:3s;
+  	}
+
+	#nav a {
+		color:#fff;
+		opacity:0.6;
+		text-decoration:none;
+		font-size:16px;
+		font-family:Karla,Helvetica,sans-serif;
+		font-weight:400;
+		padding:3px;
+	}
+
+  	.left {
+  		width:40%;
+  		height:100vh;
+  		float:left;
+  		overflow:hidden;
+  		position:relative;
+  		z-index:-1;
+  	}
+
+  	.right {
+  		width:60%;
+  		height:100vh;
+  		float:left;
+  		overflow:hidden;
+  		position:relative;
+  		z-index:-1;
+  	}
+
+  	.long {
+  		padding:0;
+  		width:700px;
+  		display:block;
+  		position:absolute;
+    	top:0;
+    	bottom:150px;
+    	right:-10%;
+    	margin:auto;
+	}
+
+	.wide {
+		padding:0;
+  		height:100%;
+  		display:block;
+  		position:absolute;
+    	top:0;
+    	bottom:200px;
+    	margin:auto;
+	}
+
+	#navbar {
+		border-top:1px solid rgba(51,51,51,0);
+	}
+
+	
+	@keyframes hi {
+		0% {transform:translate(0,0);opacity:0;}
+		100% {transform:translate(5px,5px);opacity:1;}
+	}
+
+	@keyframes here {
+		0% {background-color:rgba(255,255,255,0);}
+		100% {background-color:#963636;}
+	}
+
+	h1 {
+		opacity:0;
+		animation:hi 2s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+	}
+
+	.greetings {
+		margin:30vh 0px 0px 20%;
+		font-size:60px;
+		color:#fff;
+		line-height:10px;
+		font-family:brush,sans-serif;
+	}
+
+	.greetings p {
+		opacity:0;
+		margin:0px 0px 0px 100px;
+		font-weight:100;
+		font-family:Roboto,Helvetica,sans-serif;
+		color:#fff;
+		animation:hi 2s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+		animation-delay:1.5s;
+	}
+
+	.greetings a {
+		text-decoration:none;
+		color:#fff;
+		position:relative;
+		background-color:rgba(255,255,255,0);
+		padding:0 15px 0 5px;
+		animation:here 2s;
+		animation-iteration-count:1;
+		animation-fill-mode:forwards;
+		animation-delay:3s;
+	}
+
+	.greetings a:after {
+		content:"";
+		position:absolute;
+		width:0;
+		height:1.5px;
+		display:block;
+		left:0;
+		bottom:0;
+		background:#fff;
+		transition:width 0.8s ease;
+	}
+ 
+	.greetings a:hover:after {
+		width:100%;
+		left:0;
+	}
+
+	#overlay {
+		width:100%;
+		height:100vh;
+		position:absolute;
+		background-color:rgba(0,0,0,0.4);
+		z-index:300;
+		overflow:hidden;
+	}
+
+	iframe {
+		display:block;
+		position:relative;
+		top:-230px;
+		right:300px;
+		margin:0;
+		padding:0;
+		pointer-events:none;
+		z-index:-2;
+	}
+
+	@font-face {
+		font-family:brush;
+		src:url(fonts/brush.otf);
+	}
+
+	#navcontainer {
+		width:100%;
+		position:absolute;
+		height:100vh;
+		z-index:500;
+	}
+
+  </style>
+</head>
+
+<body>
+
+<div id="navcontainer">
+	<div id="navbar">
+		<div id="nav">
+			<ul>
+				<li><a id="currentpage" href="index.html">HOME</a></li>
+				<li><a class="underline" href="visit.html">VISIT</a></li>
+				<li><a class="underline" href="taste.html">TASTE</a></li>
+				<li><a class="underline" href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="circle"></div>
+	<div class="greetings">
+		<h1>hi emmanuel</h1>
+		<p>your trip starts <em><a href="visit.html">here</a></em>...</p>
+	</div>
+</div>
+
+<div id="overlay"></div>
+
+<div id="topwrapper">
+
+	<div class="left">
+		<img class="long" src="img/Temple.jpeg" alt="Tokyo">
+	</div>
+
+	<div class="right">
+		<iframe id="ytplayer" width="1900" height="1200" src="https://www.youtube.com/embed/gpfdz7B7dFk?autoplay=1&mute=1&controls=0&disablekb=1&loop=1&end=581&start=64&color=white&iv_load_policy=3&playlist=gpfdz7B7dFk" allow="accelerometer; autoplay; encrypted-media; gyroscope;"></iframe>
+	</div>
+
+</div>
+
+</body>
+</html>

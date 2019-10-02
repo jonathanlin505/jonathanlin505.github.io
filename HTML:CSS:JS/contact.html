@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content="This page is the contact page. While it isn't really functional (because I don't know how to make it functional), it serves to make the website look more professional. My phone number and email are not given because of security reasons.">
+  <title>Jonathan Lin | Final Project CONTACT</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
+  <style>
+
+  	#top {
+  		background-image:url(img/Fuji.jpg);
+  		background-size:100% auto;
+  		background-position:50% 100%
+   	}
+
+   	#title {
+   		overflow:hidden;
+   	}
+
+   	.sectiontext h1 {
+		letter-spacing:0.14em;
+	}
+
+   	.sectionimage img {
+		width:auto;
+		height:100%;
+		position:relative;
+		float:right;
+	}
+
+	.form-row {
+		margin:15px 0px;
+	}
+		
+	.main-label {
+		width:300px;
+		float:left;
+		padding-right:10px;
+	}
+
+	#address {
+		width:40%;
+	}
+
+	button {
+		padding:5px 10px;
+		border-radius:10px;
+	}
+
+	#form {
+		float:left;
+		width:290px;
+		height:440px;
+		background-color:#333;
+		padding:75px 30px 30px 30px;
+	}
+
+	#info {
+		float:left;
+		width:290px;
+		height:440px;
+		background-color:#fff;
+		padding:30px;
+	}
+
+	#info h1 {
+		padding:0;
+		margin:0;
+		letter-spacing:0.25em;
+		font-weight:900;
+	}
+
+	#info p {
+		font-weight:300;
+		line-height:1.5em;
+		color:#aaa;
+		margin-bottom:0;
+	}
+
+	#info h3 {
+		margin-top:50px;
+		margin-bottom:0;
+		padding:0;
+		color:#ce4141;
+	}
+
+	.moreinfo {
+		margin-top:5px;
+	}
+
+	#submit-id, #reset-id {
+    	background-color:#963636;
+    	margin-left:30px;
+    	margin-top:5px;
+    	width:100px;
+    	height:50px;
+    	position:relative;
+    	text-align:center;
+    	font-weight:400;
+    	float:left;
+    	color:#fff;
+    	font-size:12px;
+    	letter-spacing:0.25em;
+    	text-indent:0.25em;
+    	cursor:pointer;
+    	transition:all 0.5s ease;
+    	border-radius: 0;
+    	border:none;
+    }
+
+    #submit-id:hover, #reset-id:hover {
+    	background-color:#a73636;
+    }
+
+    input[type=text] {
+ 		width:100%;
+ 		padding:10px 10px;
+ 		margin:8px 0;
+  		box-sizing:border-box;
+  		border-radius:2px;
+  		border:none;
+	}
+
+	textarea {
+		width:100%;
+		height:100px;
+ 		padding:10px 10px;
+ 		margin:8px 0;
+  		box-sizing:border-box;
+  		border-radius:2px;
+  		border:none;
+	}
+
+  </style>
+</head>
+
+<body>
+
+<div id="top">
+
+	<div id="circle"></div>
+
+	<div id="navbar">
+		<div id="nav">
+			<ul>
+				<li><a class="underline" href="index.html">HOME</a></li>
+				<li><a class="underline" href="visit.html">VISIT</a></li>
+				<li><a class="underline" href="taste.html">TASTE</a></li>
+				<li><a id="currentpage" href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="title" data-scroll>
+
+		<div id="info">
+			<h1>CONTACT ME</h1>
+			<p>If you're lost or whatever, feel free to contact me. I will probably be busy and not respond. Anyways, have fun in Japan!</p>
+			<h3>Email</h3>
+			<p class="moreinfo">johndoe@email.com</p>
+			<h3>Number</h3>
+			<p class="moreinfo">(123) 456 7890</p>
+		</div>
+
+		<div id="form">
+			<form action="confirmation.html">
+
+			<div class="form-row">
+				<input type="text" id="name" placeholder="Name">
+			</div>
+
+			<div class="form-row">
+				<input type="text" id="email" placeholder="Email">
+			</div>
+
+			<div class="form-row">
+				<input type="text" id="number" placeholder="Number">
+			</div>
+
+			<div class="form-row">
+				<textarea id="question" placeholder="Any questions?"></textarea>
+			</div>
+
+			<div class="form-row">
+				<button type="submit" id="submit-id">SEND</button>
+				<button type="reset" id="reset-id">RESET</button>
+			</div>
+			</form>
+		</div>
+	</div>
+
+</div>
+
+<div id="footer">
+	<div id="author">
+		<img src="img/Cherry.png" alt="Cherry Blossom">
+		<p>thank you mom and dad<br>this was made possible with Google<br>and time</p>
+		<p><span id="copyright">&copy; Copyright 2019 | No animals were harmed | Peace</span></p>
+	</div>
+
+	<div id="links">
+		<div>
+			<h3>OTHER RESOURCES</h3>
+			<p><a href="https://ninjawifi.com/" target="_blank">Ninja Wi-Fi</a></p>
+			<p><a href="https://www.japanvisitor.com/japan-travel/japan-transport/japan-subway" target="_blank">Japan Metro Guide</a></p>
+			<p><a href="https://www.japan-guide.com/e/e2164.html" target="_blank">Tokyo Travel Guide</a></p>
+			<p><a href="https://www.japan-guide.com/e/e2158.html" target="_blank">Kyoto Travel Guide</a></p>
+		</div>
+		<div>
+			<h3>NAVIGATE</h3>
+			<p><a href="index.html">Home</a></p>
+			<p><a href="visit.html">Visit</a></p>
+			<p><a href="taste.html">Taste</a></p>
+			<p><a href="#top">Contact</a></p>
+		</div>
+	</div>
+</div>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script src="rellax/rellax.min.js"></script>
+<script>var rellax = new Rellax('.rellax'); </script>
+
+<script>
+	ScrollOut();
+</script>
+
+</body>
+</html>
