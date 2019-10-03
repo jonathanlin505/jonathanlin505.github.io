@@ -88,11 +88,11 @@
 		position:relative;
 		height:200px;
 		width:285px;
-		background-color:rgba(0,0,0,0.5);
+		background-color:rgba(0,0,0,0.7);
 	}
 
 	.overlay:hover {
-		background-color:rgba(0,0,0,0);
+		background-color:rgba(0,0,0,0.3);
 		transition:1s ease all;
 	}
 
@@ -103,6 +103,13 @@
 
 	span {
 		font-weight:900;
+	}
+
+	.copyright {
+		float:right;
+		display:block;
+		font-size:12px;
+		margin:30px 0 0 0;
 	}
 </style>
 </head>
@@ -119,32 +126,33 @@
 
 		<div id="content">
 			<h1>Portfolio</h1>
-			<p>desc</p>
-			<div class="buttonsleft">
+			<p>Below are links to projects that I have worked on that showcase my expertise in certain technical skills. Feel free to check them out!</p>
+			<div class="buttonsleft" style="background-image:url(img/baseball.jpg);background-size:auto 100%">
 				<div class="overlay">
-					<a href="http://www.google.com" target="_blank"><span>Python:</span> Baseball Analysis</a>
+					<a href="https://nbviewer.jupyter.org/github/jonathanlin505/jonathanlin505.github.io/blob/master/Python/A%20New%20Era%20of%20Data%20Analysis%20in%20Baseball/notebook.ipynb" target="_blank"><span>Python:</span> Baseball Analysis</a>
 				</div>
 			</div>
 
-			<div class="buttonsright">
+			<div class="buttonsright" style="background-image:url(img/crypto.jpg);background-size:auto 100%">
 				<div class="overlay">
-					<a href="http://www.google.com" target="_blank"><span>Python:</span> Cryptocurrencies</a>
+					<a href="https://nbviewer.jupyter.org/github/jonathanlin505/jonathanlin505.github.io/blob/master/Python/Exploring%20the%20Bitcoin%20Cryptocurrency%20Market/notebook.ipynb" target="_blank"><span>Python:</span> Cryptocurrencies</a>
 				</div>
 			</div>
 
 			<div class="divider"></div>
 
-			<div class="buttonsleft">
+			<div class="buttonsleft" style="background-image:url(img/chelab.jpg);background-size:auto 100%">
 				<div class="overlay">
-					<a href="http://www.google.com" target="_blank"><span>MATLAB:</span> ChE Lab</a>
+					<a href="Matlab/CHE444aL_Group8_Distillation_Lab.pdf" target="_blank"><span>MATLAB & Excel:</span> ChE Lab</a>
 				</div>
 			</div>
 
-			<div class="buttonsright">
+			<div class="buttonsright" style="background-image:url(img/html.jpg);background-size:auto 100%">
 				<div class="overlay">
-					<a href="http://www.google.com" target="_blank"><span>HTML/CSS/JS</span></a>
+					<a href="HTML/index.html" target="_blank"><span>HTML/CSS/JS:</span> Web Design</a>
 				</div>
 			</div>
+			<p class="copyright">Designed by Jonathan Lin</p>
 		</div>
 		<div class="clearfloat"></div>
 	</div>
