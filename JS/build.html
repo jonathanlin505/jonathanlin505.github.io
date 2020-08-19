@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jonathan Lin | Final Project</title>
+
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pokemon.css">
+
+  <style>
+
+    #top {
+      height:120px;
+    }
+
+    #logo {
+      width:900px;
+      height:30px;
+      margin-top:27px;
+    }
+
+    h1 {
+      font-size:30px;
+    }
+
+    th {
+    	height: 50px;
+    }
+
+    th, td {
+    	width: calc(1000px/6);
+    	text-align:center;
+    	padding:0;
+    }
+
+    table {
+    	border-collapse:collapse;
+    	margin-bottom:50px;
+    	text-transform:capitalize;
+    }
+
+    tr:nth-child(even) {background-color: #dbe6e1;}
+
+    .addTeam {
+    	border-radius:50%;
+    	width:30px;
+    	height:30px;
+    	background-color:rgba(0,0,0,0);
+    	border: 2px solid #7dc5a2;
+    	color:#7dc5a2;
+    	font-size:20px;
+    	text-align:center;
+    	line-height:20px;
+    }
+
+    .addTeam:hover {
+    	background-color:#93dcb8;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    #teamContainer {
+    	width:1000px;
+    	height:220px;
+    	margin:0 auto 20px auto;
+    	float:left;
+    }
+
+    .pokeCard:nth-child(6) {
+    	margin:2px 0 2px 2px;
+    }
+
+    .pokeCard:nth-child(1) {
+    	margin:2px 2px 2px 0;
+    }
+
+    .pokeCard:nth-child(2), .pokeCard:nth-child(3), .pokeCard:nth-child(4), .pokeCard:nth-child(5) {
+    	margin:2px;
+    }
+
+    .pokeCard {
+    	text-align:center;
+    	width: calc(980px/6);
+    	border-radius:10px;
+    	padding:20px 0;
+    	float:left;
+    	background-color: #dbe6e1;
+    }
+
+    .pokeCard p, .pokeCard p + img {
+    	margin:0 auto;
+    	font-weight:700;
+    	display:block;
+    	text-transform:capitalize;
+    }
+
+    .pokeCard p + img + img, .pokeCard p + img + img + img {
+    	display:inline-block;
+    	margin-left:2px;
+    	margin-right:2px;
+    }
+
+    .removeTeam {
+    	border-radius:50%;
+    	margin:20px auto 0 auto;
+    	width:30px;
+    	height:30px;
+    	background-color:rgba(0,0,0,0);
+    	border: 2px solid #ec7877;
+    	color:#ec7877;
+    	font-size:20px;
+    	text-align:center;
+    	line-height:20px;
+    	display:block;
+    }
+
+    .removeTeam:hover {
+    	background-color:#fd9b9b;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    #name {
+    	width:200px;
+    	height:30px;
+    	border-radius:5px;
+    	background-color:#fff;
+    	border:1px solid #c1c1c1;
+    	margin-left:10px;
+    	padding-left:10px;
+    	font-size:15px;
+    }
+
+    #name::placeholder {
+    	color:#ccc;
+    }
+
+    #type, #type2 {
+    	width:100px;
+    	height:34px;
+    	border-radius:5px;
+    	background-color:#fff;
+    	border:1px solid #c1c1c1;
+    	margin-left:10px;
+    	padding-left:10px;
+    	font-size:15px;
+    }
+
+    .form-row {
+    	display:inline-block;
+    	margin-right:10px;
+    }
+
+    #submit-id {
+    	margin:10px auto;
+    	border-radius:5px;
+    	width:80px;
+    	height:40px;
+    	border:2px solid #7dc5a2;
+    	background-color:rgba(0,0,0,0);
+    	color:#7dc5a2;
+    	font-size:13px;
+    	font-weight:700;
+    }
+
+    #submit-id:hover {
+    	background-color:#93dcb8;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    #clearTeam {
+    	margin:10px auto;
+    	border-radius:5px;
+    	width:80px;
+    	height:40px;
+    	border:2px solid #ec7877;
+    	background-color:rgba(0,0,0,0);
+    	color:#ec7877;
+    	font-size:13px;
+    	font-weight:700;
+    }
+
+    #clearTeam:hover {
+    	background-color:#fd9b9b;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    small {
+    	color: #f32020;
+    }
+
+    #randomize {
+        margin:10px 0 10px 5px;
+        border-radius:5px;
+        width:80px;
+        height:40px;
+        border:2px solid #d8ca54;
+        background-color:rgba(0,0,0,0);
+        color:#d8ca54;
+        font-size:13px;
+        font-weight:700;
+    }
+
+    #randomize:hover {
+        background-color:#efdf62;
+        cursor:pointer;
+        transition:0.3s ease;
+        color:#fbfbfb;
+    }
+
+    #assess {
+        margin:10px 0 10px 5px;
+        border-radius:5px;
+        width:80px;
+        height:40px;
+        border:2px solid #6397cc;
+        background-color:rgba(0,0,0,0);
+        color:#6397cc;
+        font-size:13px;
+        font-weight:700;
+    }
+
+    #assess:hover {
+        background-color:#83b5e6;
+        cursor:pointer;
+        transition:0.3s ease;
+        color:#fbfbfb;
+    }
+
+    #placeholderform {
+        margin:0;
+        display:inline-block;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="top">
+  	<div id="top_container">
+	    <div id="logo">
+	      <img id="logoimg" src="img/pokemonlogo.png" alt="Pokemon">
+	    </div>
+	    <h1>Team Manager</h1>
+	</div>
+  </div>
+
+  <div id="middle">
+    <div id="navContainer">
+
+      <a href="index.html">home</a>
+      <a href="build.html" id="currentpage">build</a>
+      <a href="assess.html">assess</a>
+    </div>
+  </div>
+
+  <div id="bottom">
+  	<div id="bottom_container">
+  		<h2>Your Party (<span id="teamCount">6</span>/6):</h2>
+
+  		<div id="teamContainer">
+            
+	  	</div>
+
+	  	<div>
+	<button id="clearTeam">Clear</button>
+    <form id="placeholderform" action="assess.html">
+        <button id="assess" type="submit">Assess</button>
+    </form>
+	</div>
+
+    
+	  	<h2>Pokemon Search</h2>
+
+	  	<form>
+
+	<div class="form-row">
+	<label class="main-label" for="name">Search by Name or Dex No.:</label>
+	<input type="text" id="name" placeholder="e.g. Bulbasaur or 1">
+	</div>
+
+	<div class="form-row">
+	<label class="main-label" for="type">or filter by Type(s):</label>
+	<select id="type">
+	<option value="any">any</option>
+	<option value="bug">bug</option>
+	<option value="dark">dark</option>
+	<option value="dragon">dragon</option>
+	<option value="electric">electric</option>
+	<option value="fairy">fairy</option>
+	<option value="fighting">fighting</option>
+	<option value="fire">fire</option>
+	<option value="flying">flying</option>
+	<option value="ghost">ghost</option>
+	<option value="grass">grass</option>
+	<option value="ground">ground</option>
+	<option value="ice">ice</option>
+	<option value="normal">normal</option>
+	<option value="poison">poison</option>
+	<option value="psychic">psychic</option>
+	<option value="rock">rock</option>
+	<option value="steel">steel</option>
+	<option value="water">water</option>
+	</select>
+	</div>
+
+	<div class="form-row">
+	<select id="type2">
+	<option value="any">any</option>
+	<option value="bug">bug</option>
+	<option value="dark">dark</option>
+	<option value="dragon">dragon</option>
+	<option value="electric">electric</option>
+	<option value="fairy">fairy</option>
+	<option value="fighting">fighting</option>
+	<option value="fire">fire</option>
+	<option value="flying">flying</option>
+	<option value="ghost">ghost</option>
+	<option value="grass">grass</option>
+	<option value="ground">ground</option>
+	<option value="ice">ice</option>
+	<option value="normal">normal</option>
+	<option value="poison">poison</option>
+	<option value="psychic">psychic</option>
+	<option value="rock">rock</option>
+	<option value="steel">steel</option>
+	<option value="water">water</option>
+	</select>
+	</div>
+
+	<div><small></small></div>
+
+	<div>
+	<button type="submit" id="submit-id">Search</button>
+    <button id="randomize">Random</button>
+	</div>
+
+
+</form>
+
+	  	<h3>Results (<span id="resultCount">3</span>):</h3>
+
+  		<table>
+  			<thead>
+	  			<tr>
+	  				<th>Dex No.</th>
+	  				<th>Sprite</th>
+	  				<th>Name</th>
+	  				<th>Type 1</th>
+	  				<th>Type 2</th>	
+	  				<th>Add</th>
+	  			</tr>
+  			</thead>
+
+  			<tbody>
+	  			
+	  		</tbody>
+
+  		</table>
+  	</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="pokemonsearch.js"></script>
+
+</body>
+
+</html>

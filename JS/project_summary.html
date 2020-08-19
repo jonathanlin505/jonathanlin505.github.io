@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jonathan Lin | Final Project Summary</title>
+
+  <style>
+    
+    #backtotop {
+      position:fixed;
+      display:block;
+      bottom:40px;
+      right:40px;
+    }
+
+  	body {
+  		margin:0;
+  		font-family:Helvetica,sans-serif;
+  		color:#333;
+  	}
+
+    h4 {
+      color:#aaa;
+    }
+
+  	.top {
+  		width:800px;
+      margin:0 auto;
+    }
+
+  	li,p {
+  		line-height:1.5em;
+  	}
+
+  	a {
+  		color:#999;
+  	}
+
+    img {
+      width:800px;
+      height:auto;
+    }
+
+  </style>
+</head>
+
+<body>
+
+	<div class="top" id="topofpage">
+
+		<h1>Final Project Summary</h1>
+
+    <h3>Jump to Section:</h3>
+    <ol>
+      <li><a href="#jump1">Topic and Purpose</a></li>
+      <li><a href="#jump2">Instructions</a>
+        <ol>
+          <li><a href="#jump2.1">Pokemon Search</a></li>
+          <li><a href="#jump2.2">Assemble Your Team</a></li>
+          <li><a href="#jump2.3">Assess Your Team</a></li>
+        </ol>
+      </li>
+      <li><a href="#jump3">Extras Used</a></li>
+    </ol>
+
+		<h3 id="jump1">1. Topic and Purpose:</h3>
+		<p>This project is a tool that allows people to build Pokemon teams and see their weaknesses and strengths. It is for Pokemon players who want to plan out their teams casually or competitively</p>
+
+		<h3 id="jump2">2. Instructions:</h3>
+		<h4 id="jump2.1">Step 1: Pokemon Search</h4>
+    <p>To begin, head over to the Build via the navbar. On the Build page, you will see the following search bar:</p>
+    <img src="img/search.png" alt="Search">
+    <p>Search for Pokemon in <em>one</em> of the following ways:</p>
+    <ol>
+      <li>Enter the exact name of a Pokemon or a Pokedex number. Click the Search button.</li>
+      <li>Select the type or type combinations of the Pokemon you want to search for. Click the Search button.</li>
+      <li>If all inputs are left in their default states, clicking the Search button will return all Pokemon.</li>
+      <li>Click the Random button to generate a list of 10 random Pokemon.</li>
+    </ol>
+    <p>Invalid searches will prompt appropriate error messages to appear.</p>
+
+    <h4 id="jump2.2">Step 2: Assemble Your Team</h4>
+    <p>If your search goes through without error, you should see the results below the search bar. An example search result is shown below:</p>
+    <img src="img/assembleAdd.png" alt="Search Result">
+    <p>To add Pokemon to your team, simply click on the circled green "plus" button to the right of the result. Keep in mind that you can only have a maximum of 6 Pokemon in your party. Pokemon that you have added to your team will appear in your party at the top of the page like so:</p>
+    <img src="img/assembleRemove.png" alt="Party View">
+    <p>To remove a particular Pokemon from your party, simply click on the circled red "minus" button underneath the Pokemon you want to remove. To remove all the Pokemon in your team, click the Clear button underneath your party.</p>
+
+    <h4 id="jump2.3">Step 3: Assess Your Team</h4>
+    <p>Once you are satisfied with your team, head over to the Assess page by clicking on the Assess button underneath your party or via the navbar. You will see the following graphs:</p>
+    <img src="img/assessResult.png" alt="Type Matchup Assessment">
+    <p>The graphs show how strong your team is against each type offensively and defensively. You can go back to the Build page to make changes to your team at any moment.</p>
+
+    <h3 id="jump3">3. Extras Used:</h3>
+    <ul>
+      <li>Event-driven DOM manipulation
+        <ul>
+          <li>The search function displays results using DOM manipulation. A for loop is used to create each row of the results.</li>
+          <li>The ability to add and remove Pokemon also uses DOM manipulation.</li>
+        </ul>
+      </li>
+      <li>JSON / JSONP API
+        <ul>
+          <li><a href="https://pokeapi.co/docs/v2.html" target="_blank">PokeAPI</a> is used to obtain all Pokemon data via the GET method. The retreived JSON objects are then iterated through a for loop for DOM manipulation.</li>
+        </ul>
+      </li>
+      <li>Web Storage
+        <ul>
+          <li>Local storage is used to store user's team information so that when the page is refreshed, the user wouldn't have to start building his or her team from scratch.</li>
+          <li>The Assess page borrows local storage information to calculate the team's type matchup.</li>
+        </ul>
+      </li>
+      <li>JS / jQuery Plugins
+        <ul>
+          <li><a href="https://api.jquery.com/" target="_blank">jQuery</a> is used to simplify JS. For instance, $(<em>selectors</em>) is used instead of document.querySelector(<em>selectors</em>).</li>
+          <li><a href="https://www.chartjs.org/docs/latest/" target="_blank">Chart.js</a> is used to create the type matchup graphs in the Assess page. In brief, the plugin converts arrays of data to a chart of choice via canvas rendering.</li>
+        </ul>
+      </li>
+    </ul>
+
+	</div>
+
+  <a id="backtotop" href="#topofpage">Back to Top</a>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jonathan Lin | Final Project</title>
+
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pokemon.css">
+
+  <style>
+    
+    #peekatchu {
+      height:100px;
+      width:auto;
+      position:absolute;
+      bottom:0;
+      right:15vw;
+    }
+
+    .addTeam {
+    	border-radius:50%;
+    	width:30px;
+    	height:30px;
+    	background-color:rgba(0,0,0,0);
+    	border: 2px solid #7dc5a2;
+    	color:#7dc5a2;
+    	font-size:20px;
+    	text-align:center;
+    	line-height:20px;
+    	display:inline-block;
+    }
+
+    .addTeam:hover {
+    	background-color:#93dcb8;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+	.removeTeam {
+    	border-radius:50%;
+    	width:30px;
+    	height:30px;
+    	background-color:rgba(0,0,0,0);
+    	border: 2px solid #ec7877;
+    	color:#ec7877;
+    	font-size:20px;
+    	text-align:center;
+    	line-height:20px;
+    	display:inline-block;
+    }
+
+    .removeTeam:hover {
+    	background-color:#fd9b9b;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    #clearTeam {
+    	border-radius:5px;
+    	width:80px;
+    	height:40px;
+    	border:2px solid #ec7877;
+    	background-color:rgba(0,0,0,0);
+    	color:#ec7877;
+    	font-size:13px;
+    	font-weight:700;
+    }
+
+    #clearTeam:hover {
+    	background-color:#fd9b9b;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    p, li, ul, ol {
+    	margin-bottom:10px;
+    }
+
+    #randomize {
+        margin:10px 0 10px 5px;
+        border-radius:5px;
+        width:80px;
+        height:40px;
+        border:2px solid #d8ca54;
+        background-color:rgba(0,0,0,0);
+        color:#d8ca54;
+        font-size:13px;
+        font-weight:700;
+    }
+
+    #randomize:hover {
+        background-color:#efdf62;
+        cursor:pointer;
+        transition:0.3s ease;
+        color:#fbfbfb;
+    }
+
+    #search {
+    	margin:10px auto;
+    	border-radius:5px;
+    	width:80px;
+    	height:40px;
+    	border:2px solid #7dc5a2;
+    	background-color:rgba(0,0,0,0);
+    	color:#7dc5a2;
+    	font-size:13px;
+    	font-weight:700;
+    }
+
+    #search:hover {
+    	background-color:#93dcb8;
+    	cursor:pointer;
+    	transition:0.3s ease;
+    	color:#fbfbfb;
+    }
+
+    #assess {
+        border-radius:5px;
+        width:80px;
+        height:40px;
+        border:2px solid #6397cc;
+        background-color:rgba(0,0,0,0);
+        color:#6397cc;
+        font-size:13px;
+        font-weight:700;
+    }
+
+    #assess:hover {
+        background-color:#83b5e6;
+        cursor:pointer;
+        transition:0.3s ease;
+        color:#fbfbfb;
+    }
+
+    ol {
+    	margin-bottom:50px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="top">
+  	<div id="top_container">
+	    <div id="logo">
+	      <img id="logoimg" src="img/pokemonlogo.png" alt="Pokemon">
+	    </div>
+	    <h1>Team Manager</h1>
+	    <img id="peekatchu" src="img/peekatchu.png" alt="Peek-at-chu">
+	</div>
+  </div>
+
+  <div id="middle">
+    <div id="navContainer">
+
+      <a href="index.html" id="currentpage">home</a>
+      <a href="build.html">build</a>
+      <a href="assess.html">assess</a>
+    </div>
+  </div>
+
+  <div id="bottom">
+    <div id="bottom_container">
+      <h2>Hello</h2>
+      <p>This is the Pokemon Team Manager for generations 1 through 6. This tool is used to track team type advantages and weaknesses for competitive play. See below to see how to use this website.</p>
+
+      <h2>How to Use</h2>
+      <ol>
+        <li>To start, head over to the <a href="build.html">Build</a> page.</li>
+        <li>Search the Pokemon you want on your team using <button id="search">Search</button> or <button id="randomize">Random</button> . You can search by either Pokemon name, dex number, or type (note that you cannot search by both name/dex no. and type).</li>
+        <li>Scroll down to see the results of your search. Click <button class="addTeam">+</button> to add Pokemon in your team.</li>
+        <li>Pokemon that you add to your team will appear in your party, displayed on the top of the page. To remove Pokemon, either click <button class="removeTeam">-</button> to remove Pokemon individually or click <button id="clearTeam">Clear</button> to remove your entire team.</li>
+        <li>Once you're satisfied with your team, click <button id="assess">Assess</button> to have your team evaluated.</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+
+</html>

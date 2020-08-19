@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jonathan Lin | Final Project</title>
+
+  <meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pokemon.css">
+
+  <style>
+
+    #top {
+      height:120px;
+    }
+
+    #logo {
+      width:900px;
+      height:30px;
+      margin-top:27px;
+    }
+
+    h1 {
+      font-size:30px;
+    }
+
+    #chartWrapper {
+      width:450px;
+      float:left;
+      height:530px;
+    }
+
+    #chartWrapper2 {
+      width:450px;
+      height:530px;
+      float:left;
+    }
+
+    #myChart {
+      display:block;
+      position:absolute;
+    }
+
+    #myChart2 {
+      display:block;
+      position:absolute;
+    }
+
+    #typeIcon1 {
+      width:50px;
+      height:440px;
+      position:relative;
+      top:32px;
+      background-color:#ecf5f0;
+    }
+
+    #typeIcon1 img {
+      float:left;
+      margin:6.16px 15px;
+    }
+
+    #typeIcon2 {
+      width:50px;
+      height:440px;
+      position:relative;
+      top:32px;
+      background-color:#ecf5f0;
+    }
+
+    #typeIcon2 img {
+      float:left;
+      margin:6.16px 15px;
+    }
+
+    #separate {
+      float:left;
+      width:100px;
+      height:530px;
+    }
+
+    .title {
+      width:200px;
+      height:30px;
+      position:relative;
+      bottom:440px;
+      left:125px;
+      background-color:#ecf5f0;
+      text-align:center;
+      line-height:30px;
+    }
+
+    p {
+      margin-bottom:50px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="top">
+  	<div id="top_container">
+	    <div id="logo">
+	      <img id="logoimg" src="img/pokemonlogo.png" alt="Pokemon">
+	    </div>
+	    <h1>Team Manager</h1>
+	</div>
+  </div>
+
+  <div id="middle">
+    <div id="navContainer">
+
+      <a href="index.html">home</a>
+      <a href="build.html">build</a>
+      <a href="assess.html" id="currentpage">assess</a>
+    </div>
+  </div>
+
+  <div id="bottom">
+  	<div id="bottom_container">
+
+	  	<h2>Type Matchup Assessment</h2>
+
+      <div id="chartWrapper">
+        <canvas id="myChart" width="450" height="524"></canvas>
+        <div id="typeIcon1">
+          <img src="img/bug.gif" alt="bug">
+          <img src="img/dark.gif" alt="dark">
+          <img src="img/dragon.gif" alt="dragon">
+          <img src="img/electric.gif" alt="electric">
+          <img src="img/fairy.gif" alt="fairy">
+          <img src="img/fighting.gif" alt="fighting">
+          <img src="img/fire.gif" alt="fire">
+          <img src="img/flying.gif" alt="flying">
+          <img src="img/ghost.gif" alt="ghost">
+          <img src="img/grass.gif" alt="grass">
+          <img src="img/ground.gif" alt="ground">
+          <img src="img/ice.gif" alt="ice">
+          <img src="img/normal.gif" alt="normal">
+          <img src="img/poison.gif" alt="poison">
+          <img src="img/psychic.gif" alt="psychic">
+          <img src="img/rock.gif" alt="rock">
+          <img src="img/steel.gif" alt="steel">
+          <img src="img/water.gif" alt="water">
+        </div>
+        <div class="title">Offensive Advantage</div>
+      </div>
+
+      <div id="separate"></div>
+
+      <div id="chartWrapper2">
+        <canvas id="myChart2" width="450" height="524"></canvas>
+        <div id="typeIcon2">
+          <img src="img/bug.gif" alt="bug">
+          <img src="img/dark.gif" alt="dark">
+          <img src="img/dragon.gif" alt="dragon">
+          <img src="img/electric.gif" alt="electric">
+          <img src="img/fairy.gif" alt="fairy">
+          <img src="img/fighting.gif" alt="fighting">
+          <img src="img/fire.gif" alt="fire">
+          <img src="img/flying.gif" alt="flying">
+          <img src="img/ghost.gif" alt="ghost">
+          <img src="img/grass.gif" alt="grass">
+          <img src="img/ground.gif" alt="ground">
+          <img src="img/ice.gif" alt="ice">
+          <img src="img/normal.gif" alt="normal">
+          <img src="img/poison.gif" alt="poison">
+          <img src="img/psychic.gif" alt="psychic">
+          <img src="img/rock.gif" alt="rock">
+          <img src="img/steel.gif" alt="steel">
+          <img src="img/water.gif" alt="water">
+        </div>
+        <div class="title">Defensive Advantage</div>
+      </div>
+
+      <h2>How to read the charts</h2>
+      <p>The type matchup charts assess the strengths of your team based on the number of Pokemon on your team and the types of your Pokemon. The scales of both charts range from 0 (no advantage) to 100 (absolute advantage). For instance, a 0 indicates no damage dealt against a certain type and taken from a certain type in offense and defense respectively, whereas a 100 indicates 4x effectiveness in the same regard.</p>
+
+
+  	</div>
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="pokemonassess.js"></script>
+<script src="Chart.min.js"></script>
+
+<script>
+  var ctx = document.getElementById('myChart');
+  var myChart = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting','Fire', 'Flying', 'Ghost', 'Grass', 'Ground', 'Ice','Normal', 'Poison', 'Psychic', 'Rock', 'Steel', 'Water', 'Average'],
+        datasets: [{
+            label: 'Offensive Advantage',
+            data: offenseMatchup,
+            backgroundColor: [
+                'rgba(173, 189, 33, 0.2)',
+                'rgba(115, 90, 73, 0.2)',
+                'rgba(114, 93, 216, 0.2)',
+                'rgba(252, 202, 72, 0.2)',
+                'rgba(247, 181, 247, 0.2)',
+                'rgba(165, 81, 57, 0.2)',
+                'rgba(247, 81, 49, 0.2)',
+                'rgba(157, 174, 247, 0.2)',
+                'rgba(99, 98, 181, 0.2)',
+                'rgba(118, 192, 82, 0.2)',
+                'rgba(202, 178, 109, 0.2)',
+                'rgba(90, 206, 232, 0.2)',
+                'rgba(161, 154, 139, 0.2)',
+                'rgba(159, 88, 147, 0.2)',
+                'rgba(252, 113, 163, 0.2)',
+                'rgba(190, 165, 89, 0.2)',
+                'rgba(173, 173, 198, 0.2)',
+                'rgba(61, 148, 236, 0.2)',
+                'rgba(0, 0, 0, 0.5)'
+            ],
+            borderColor: [
+                'rgba(173, 189, 33, 1)',
+                'rgba(115, 90, 73, 1)',
+                'rgba(114, 93, 216, 1)',
+                'rgba(252, 202, 72, 1)',
+                'rgba(247, 181, 247, 1)',
+                'rgba(165, 81, 57, 1)',
+                'rgba(247, 81, 49 , 1)',
+                'rgba(157, 174, 247, 1)',
+                'rgba(99, 98, 181, 1)',
+                'rgba(118, 192, 82, 1)',
+                'rgba(202, 178, 109, 1)',
+                'rgba(90, 206, 232, 1)',
+                'rgba(161, 154, 139, 1)',
+                'rgba(159, 88, 147, 1)',
+                'rgba(252, 113, 163, 1)',
+                'rgba(190, 165, 89, 1)',
+                'rgba(173, 173, 198, 1)',
+                'rgba(61, 148, 236, 1)',
+                'rgba(0, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    min:0,
+                    max:100
+                }
+            }]
+        }
+    }
+});
+
+
+
+var ctx = document.getElementById('myChart2');
+  var myChart2 = new Chart(ctx, {
+    type: 'horizontalBar',
+    data: {
+        labels: ['Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting','Fire', 'Flying', 'Ghost', 'Grass', 'Ground', 'Ice','Normal', 'Poison', 'Psychic', 'Rock', 'Steel', 'Water', 'Average'],
+        datasets: [{
+            label: 'Defensive Advantage',
+            data: defenseMatchup,
+            backgroundColor: [
+                'rgba(173, 189, 33, 0.2)',
+                'rgba(115, 90, 73, 0.2)',
+                'rgba(114, 93, 216, 0.2)',
+                'rgba(252, 202, 72, 0.2)',
+                'rgba(247, 181, 247, 0.2)',
+                'rgba(165, 81, 57, 0.2)',
+                'rgba(247, 81, 49, 0.2)',
+                'rgba(157, 174, 247, 0.2)',
+                'rgba(99, 98, 181, 0.2)',
+                'rgba(118, 192, 82, 0.2)',
+                'rgba(202, 178, 109, 0.2)',
+                'rgba(90, 206, 232, 0.2)',
+                'rgba(161, 154, 139, 0.2)',
+                'rgba(159, 88, 147, 0.2)',
+                'rgba(252, 113, 163, 0.2)',
+                'rgba(190, 165, 89, 0.2)',
+                'rgba(173, 173, 198, 0.2)',
+                'rgba(61, 148, 236, 0.2)',
+                'rgba(0, 0, 0, 0.5)'
+            ],
+            borderColor: [
+                'rgba(173, 189, 33, 1)',
+                'rgba(115, 90, 73, 1)',
+                'rgba(114, 93, 216, 1)',
+                'rgba(252, 202, 72, 1)',
+                'rgba(247, 181, 247, 1)',
+                'rgba(165, 81, 57, 1)',
+                'rgba(247, 81, 49 , 1)',
+                'rgba(157, 174, 247, 1)',
+                'rgba(99, 98, 181, 1)',
+                'rgba(118, 192, 82, 1)',
+                'rgba(202, 178, 109, 1)',
+                'rgba(90, 206, 232, 1)',
+                'rgba(161, 154, 139, 1)',
+                'rgba(159, 88, 147, 1)',
+                'rgba(252, 113, 163, 1)',
+                'rgba(190, 165, 89, 1)',
+                'rgba(173, 173, 198, 1)',
+                'rgba(61, 148, 236, 1)',
+                'rgba(0, 0, 0, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    min:0,
+                    max:100
+                }
+            }]
+        }
+    }
+});
+</script>
+
+</body>
+
+
+
+</html>
